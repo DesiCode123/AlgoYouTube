@@ -1,0 +1,55 @@
+Certainly! Below are the refined explanations and interview questions written in correct and professional English:
+
+### Run-Time Polymorphism
+Run-time polymorphism means that the Java Virtual Machine (JVM) decides dynamically at runtime which method
+definition should be selected between both parent and child class.
+
+### Abstract Class
+To prevent the creation of an object of a class called 'Animal', we make this class an abstract class,
+using the `abstract` keyword.
+
+### Interface
+An interface contains only constants, not variables. When we declare a variable with `static` and `final`
+keywords, that variable becomes a constant. In real-time, we usually name our constants in uppercase letters
+to identify them easily, for example, `int NAME = 200;`.
+
+A functional interface is an interface that has just one abstract method, and it may have multiple
+ default or static methods. They were introduced in Java 8. Functional interfaces are annotated
+ with `@FunctionalInterface` annotation; however, this is not mandatory. If you use this annotation,
+ it will restrict you from adding another abstract method. Examples of functional interfaces from before
+ Java 8 are `Runnable` and `Callable`.
+
+### Changes to Interfaces after Java 8
+1. Introduction of functional interfaces.
+2. Introduction of static and default concrete methods in interfaces.
+
+To access a static method of an interface, we use the interface name, e.g., `Calculator.hello()`.
+To access default and abstract methods, we need to create an object for the child class which
+implements that interface.
+
+### String
+String is a class in Java used to store an array of characters. Strings are immutable objects;
+once a string has been initialized, it cannot be changed. Strings are made immutable by using the
+`final` keyword. Strings are often used to store highly sensitive content like passwords and are preferred
+as keys in hashmaps due to their immutability and security.
+
+### String Creation
+There are two ways to create a string:
+1. String as a literal: `String s = "hello";`
+2. String as an object: `String s1 = new String();`
+
+### Interview Questions on String
+1. How many objects are created in memory when a string is initialized?
+2. Clarify the difference and usage between `==` and `.equals()` when comparing strings.
+3. What happens if `null` is assigned to a string?
+4. What happens if an empty value is assigned to a string?
+
+### String Constant Pool
+String constant pool is used to maintain the immutability of the `String` class and to maintain memory efficiency.
+ When you create a string as a literal, you create an object in the string constant pool in heap memory.
+
+### Please Note:
+- When comparing strings, we use `.equals()` method of the `Object` class.
+- Using `==` will compare object references, not the content of the strings.
+- Assigning `null` or an empty value to a string will not cause an error but will result in different string states
+which you need to handle properly in your code to avoid `NullPointerException` or unexpected behavior.

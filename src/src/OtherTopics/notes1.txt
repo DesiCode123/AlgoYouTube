@@ -1,0 +1,50 @@
+
+### Variables
+A variable is a container which stores data.
+
+### Data
+- **Primitive Data**: Includes `Integer`, `char`, etc.
+- **Non-Primitive Data**: References to an object or a class.
+
+### DataType and Scope
+When the Java Virtual Machine (JVM) receives an instruction to create a variable,
+it requests the CPU to allocate memory, and the size of the memory required is determined
+by the datatype of the variable.
+
+### Data Storage
+Integer data can be stored using data types such as `byte`, `short`, `int`, and `long`.
+
+### Declaration and Initialization of a Variable
+- Declaration: `DataType variableName;` e.g. `int x;`
+- Initialization: `DataType variableName = value;` e.g. `int x = 10;`
+
+### Binary Format
+The value of a variable is converted into binary format using ASCII.
+
+### Classification of Variables Based on Scope
+Variables can be classified based on their visibility or scope as seen by the JVM:
+1. **Local Variables**
+2. **Global Variables**: Also known as instance variables, attributes, fields, or non-static
+variables.
+3. **Static Variables**
+
+### Memory Areas Allocated at Runtime
+There are two memory areas allocated for your code at runtime:
+1. **Stack**: This is temporary and the fastest memory. Method invocations, local variables,
+ and reference variables to an object are stored in the stack.
+2. **Heap**: Objects along with instance variables are stored in the heap.
+
+### Method Invocation and Stack Frame
+Whenever a method is invoked, the JVM creates a stack frame for that method where it starts
+ executing the instructions of the method. The first stack frame for every program is the
+ main method stack frame.
+
+### Example:
+```java
+class A {
+    public static void main(String[] args) {
+        int x;
+        System.out.println("The value of x: " + x);
+    }
+}
+```
